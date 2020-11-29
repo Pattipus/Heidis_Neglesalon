@@ -43,6 +43,14 @@ h3 {
   font-size: 1.5vw;
 }
 
+img {
+  object-fit: cover;
+}
+
+.menuBtn {
+  display: none;
+}
+
 header {
   background-color: #E0BAA5;
   width: 100%;
@@ -383,6 +391,18 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .menuBtn {
+    position: fixed;
+    display: block;
+    z-index: 6;
+    right: 10vw;
+    top: 5vw;
+  }
+
+  .main {
+    padding: 0;
+  }
+
   .link {
     font-size: 6vw;
   }
@@ -409,6 +429,28 @@ footer {
 
   .socialIcon {
     width: 15vw;
+  }
+
+  header {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column;
+    transition-duration: 500;
+  }
+
+  .logoSvg {
+    width: 20vw;
+    margin-top: 5vw;
+  }
+
+  .nav {
+    flex-flow: column;
+    height: 40vw;
+  }
+
+  .social {
+    margin-bottom: 5vw;
   }
 
   footer {
@@ -493,6 +535,91 @@ footer {
     margin-top: 4vw;
     border-radius: 5vw;
     padding: 1vw 4vw;
+  }
+
+  .topServices .title {
+    width: 44vw;
+    margin-left: 28vw;
+  }
+  .topServices img {
+    width: 100vw;
+    height: 100vw;
+  }
+  .topServices img:last-child {
+    display: none;
+  }
+
+  .services .service {
+    margin: 30vw 0 70vw 0;
+  }
+  .services .service .serviceImages {
+    margin-left: 0;
+  }
+  .services .service .serviceImages img {
+    width: 30vw;
+    height: 35vw;
+  }
+  .services .service .serviceImages img:last-child {
+    display: none;
+  }
+  .services .serviceDescription {
+    flex-flow: column-reverse;
+    align-items: center;
+    height: 90vw;
+    margin-top: 30vw !important;
+  }
+  .services .serviceDescription .serviceDescriptionImage {
+    align-items: center !important;
+    justify-content: center;
+  }
+  .services .serviceDescription .serviceDescriptionImage .colorbox {
+    width: 80vw !important;
+    height: 30vw !important;
+  }
+  .services .serviceDescription .serviceDescriptionImage img {
+    align-self: unset !important;
+    height: 75vw !important;
+    width: 60vw !important;
+    margin-top: 10vw !important;
+  }
+  .services .serviceDescription .description {
+    width: 70vw !important;
+  }
+  .services .serviceDescription .description p {
+    width: 70vw !important;
+    font-size: 3vw !important;
+  }
+  .services .serviceDescription .description h3 {
+    width: 70vw !important;
+  }
+  .services .service:last-child {
+    margin-bottom: 100vw;
+  }
+  .services .flowersServices {
+    min-height: 610vw !important;
+  }
+
+  .contactImage {
+    width: 80vw;
+    height: 80vw;
+    margin: 5vw 0;
+  }
+  .contactImage .profile {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  .contactInfo {
+    flex-flow: column-reverse;
+  }
+  .contactInfo img {
+    width: 80vw !important;
+    height: 80vw !important;
+  }
+  .contactInfo .contactInfoBox {
+    width: 50vw;
+    height: 60vw;
+    margin: 0 0 -20vw 0;
   }
 }
 

@@ -55,7 +55,15 @@ h3 {
     font-size: 1.5vw;
 }
 
+img {
+    object-fit: cover;
+}
+
 //-----------------Header
+.menuBtn {
+    display: none;
+}
+
 header {
     background-color: $secondary;
     width: 100%;
@@ -406,123 +414,208 @@ footer {
 }
 
 //------------------Footer End
-
-
-@media only screen and (max-width: 600px){
-
-    .link{
+@media only screen and (max-width: 600px) {
+    .menuBtn {
+        position: fixed;
+        display: block;
+        z-index: 6;
+        right: 10vw;
+        top: 5vw;
+    }
+    .main {
+        padding: 0;
+    }
+    .link {
         font-size: 6vw;
     }
-
-    p{
+    p {
         font-size: 4vw;
     }
-
-    h1{
+    h1 {
         font-size: 9vw;
     }
-
-    h2{
+    h2 {
         font-size: 7vw;
     }
-
-    h3{
+    h3 {
         font-size: 6vw;
     }
-
-    .social{
+    .social {
         width: 50vw;
     }
-
-    .socialIcon{
+    .socialIcon {
         width: 15vw;
     }
-
-    footer{
+    header {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        flex-flow: column;
+        transition-duration: 500;
+    }
+    .logoSvg {
+        width: 20vw;
+        margin-top: 5vw;
+    }
+    .nav {
+        flex-flow: column;
+        height: 40vw;
+    }
+    .social {
+        margin-bottom: 5vw;
+    }
+    footer {
         height: 40vw;
         margin-top: -45vw;
     }
-
-    .swirl{
+    .swirl {
         width: 30vw;
     }
-
-    .infoFooter{
+    .infoFooter {
         flex-flow: column;
         height: 110vw;
     }
-
-
-    .flowers{
+    .flowers {
         margin-top: -20vw;
     }
-
-    .flower{
+    .flower {
         margin-bottom: 90vw;
         width: 30vw;
     }
     .flower:nth-child(even) {
         width: 50vw;
     }
-
-    .serviceFrontPage{
+    .serviceFrontPage {
         flex-flow: column;
         margin: 20vw 0;
-
-        .serviceImage{
+        .serviceImage {
             width: 80vw;
             height: 80vw;
         }
-        .serviceFrontPageTextfield{
+        .serviceFrontPageTextfield {
             height: 70vw;
             width: 60vw;
             margin: -20vw 0 0 0;
         }
-        
     }
-    
-    .button{
+    .button {
         width: 35vw;
         padding: 1.5vw;
         border-radius: 5vw;
         align-self: center;
-
     }
-
-    .serviceFrontPage:nth-child(odd){
+    .serviceFrontPage:nth-child(odd) {
         flex-flow: column;
-        .serviceFrontPageTextfield{
+        .serviceFrontPageTextfield {
             margin: -20vw 0 0 0;
-
         }
     }
-    
-    .phone{
+    .phone {
         font-size: 5vw;
         margin-bottom: 2vw;
     }
-
-    .galleri{
+    .galleri {
         height: 170vw;
     }
-
-    .instagramGalleri{
+    .instagramGalleri {
         width: 42*2vw;
         height: 40*2+4vw;
     }
-
-    .feed{
+    .feed {
         width: 40vw;
         height: 40vw;
     }
-
-    .feed:nth-child(n+5){
+    .feed:nth-child(n+5) {
         display: none;
     }
-
     .buttonInstagram {
         margin-top: 4vw;
         border-radius: 5vw;
         padding: 1vw 4vw;
+    }
+    .topServices {
+        .title {
+            width: 44vw;
+            margin-left: 28vw;
+        }
+        img {
+            width: 100vw;
+            height: 100vw;
+        }
+        img:last-child {
+            display: none;
+        }
+    }
+    .services {
+        .service {
+            margin: 30vw 0 70vw 0;
+            .serviceImages {
+                margin-left: 0;
+                img {
+                    width: 30vw;
+                    height: 35vw;
+                }
+                img:last-child {
+                    display: none;
+                }
+            }
+        }
+        .serviceDescription {
+            flex-flow: column-reverse;
+            align-items: center;
+            height: 90vw;
+            margin-top: 30vw !important;
+            .serviceDescriptionImage {
+                align-items: center !important;
+                justify-content: center;
+                .colorbox {
+                    width: 80vw !important;
+                    height: 30vw !important;
+                }
+                img {
+                    align-self: unset !important;
+                    height: 75vw !important;
+                    width: 60vw !important;
+                    margin-top: 10vw !important;
+                }
+            }
+            .description {
+                width: 70vw !important;
+                p {
+                    width: 70vw !important;
+                    font-size: 3vw !important;
+                }
+                h3 {
+                    width: 70vw !important;
+                }
+            }
+        }
+        .service:last-child {
+            margin-bottom: 100vw;
+        }
+        .flowersServices {
+            min-height: 610vw !important;
+        }
+    }
+    .contactImage {
+        width: 80vw;
+        height: 80vw;
+        margin: 5vw 0;
+        .profile {
+            height: 60vw;
+            width: 60vw;
+        }
+    }
+    .contactInfo {
+        flex-flow: column-reverse;
+        img {
+            width: 80vw !important;
+            height: 80vw !important;
+        }
+        .contactInfoBox {
+            width: 50vw;
+            height: 60vw;
+            margin: 0 0 -20vw 0;
+        }
     }
 }
