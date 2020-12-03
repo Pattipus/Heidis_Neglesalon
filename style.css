@@ -1,4 +1,13 @@
+/*
+Theme Name: Heidis Neglesalon
+Theme URI:
+Author: Jonathan Madsen
+Author URI:
+Description: A theme for Heidis Neglesalon
+Text Domain: heidis-neglesalon.dk
+*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Playfair+Display&display=swap");
+
 * {
   margin: 0;
 }
@@ -68,10 +77,28 @@ header {
   width: 5vw;
 }
 
-.nav {
+.menu {
+  width: 40vw;
+  
+}
+
+.menu ul{
   width: 40vw;
   display: flex;
   justify-content: space-between;
+  padding-inline-start: 0;
+}
+
+.menu ul li{
+  list-style: none;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: #544D4E;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5vw;
+  text-decoration: none;
 }
 
 .social {
@@ -189,15 +216,10 @@ video {
   margin: 3vw 0;
 }
 
-.feed {
-  width: 18vw;
-  height: 18vw;
-  background-color: #B58E72;
+.instagramGalleriMobile {
+  display:none;
 }
 
-.feed:nth-child(odd) {
-  background-color: #E0BAA5;
-}
 
 .buttonInstagram {
   background-color: #E0BAA5;
@@ -344,6 +366,7 @@ video {
 
 .contactDescription {
   width: 60vw;
+  margin-bottom: 1vw;
 }
 
 .contactInfo {
@@ -388,6 +411,10 @@ footer {
   width: 100%;
   padding: 1vw 2vw;
   box-sizing: border-box;
+}
+
+#cookie_action_close_header{
+  border-radius: 5vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -438,13 +465,15 @@ footer {
     flex-flow: column;
     transition-duration: 500;
   }
-
+  .menu ul li a{
+    font-size: 6vw;
+  }
   .logoSvg {
     width: 20vw;
     margin-top: 5vw;
   }
 
-  .nav {
+  .menu ul {
     flex-flow: column;
     height: 40vw;
   }
@@ -479,6 +508,10 @@ footer {
   .flower:nth-child(even) {
     width: 50vw;
   }
+  
+  //.video{
+  //display: none;
+  //}
 
   .serviceFrontPage {
     flex-flow: column;
@@ -514,23 +547,20 @@ footer {
   }
 
   .galleri {
-    height: 170vw;
+    height: 190vw;
   }
 
-  .instagramGalleri {
-    width: 84vw;
-    height: 84vw;
+  .instagramGalleri{
+    height: 95vw;
   }
-
-  .feed {
-    width: 40vw;
-    height: 40vw;
-  }
-
-  .feed:nth-child(n+5) {
+  #sb_instagram #sbi_images .sbi_item:nth-child(n+5){
     display: none;
   }
-
+  
+  #sb_instagram.sbi_col_3 #sbi_images .sbi_item, #sb_instagram.sbi_col_4 #sbi_images .sbi_item, #sb_instagram.sbi_col_5 #sbi_images .sbi_item, #sb_instagram.sbi_col_6 #sbi_images .sbi_item{
+    width:50%;
+    height: 50vw;
+  }
   .buttonInstagram {
     margin-top: 4vw;
     border-radius: 5vw;
